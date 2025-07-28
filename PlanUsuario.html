@@ -3,8 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="usuario.css">
   <title>Rutina Personalizada - FitnessMB</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #ff0000;
+    }
+    .detalle {
+      color: #00aaff;
+    }
+    .cliente-info, .plan-entrenamiento, .progreso, footer {
+      margin-bottom: 30px;
+      border: 1px solid #333;
+      padding: 15px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+    }
+    .dia {
+      cursor: pointer;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #2c2c2c;
+      border-radius: 5px;
+    }
+    .ejercicios {
+      display: none;
+      margin-top: 10px;
+    }
+    .ejercicio {
+      background-color: #2b2b2b;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .video {
+      display: none;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .emoji-video {
+      cursor: pointer;
+      font-size: 18px;
+      float: right;
+    }
+    footer {
+      text-align: center;
+      font-weight: bold;
+      color: #00aaff;
+    }
+  </style>
 </head>
 <body>
   <h1>Rutina Personalizada</h1>
@@ -23,89 +75,94 @@
   <section class="plan-entrenamiento">
     <h2>Plan de Entrenamiento</h2>
 
-    <div class="dia" onclick="toggleEjercicios('dia1')">
-      <h3>Lunes - Cuadricpes/aductor</h3>
+    <div class="dia" onclick="toggleEjercicios('ejLunes')">
+      <h3>Lunes - Cuádriceps / Aductor</h3>
     </div>
-    <div id="dia1" class="ejercicios">
+    <div id="ejLunes" class="ejercicios">
       <div class="ejercicio">
-        <span>Sentadilla Libre </span>
-        <span>4x12</span>
-        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+        <strong>🏋️ Sentadilla Libre</strong><br>
+        🔁 Series: 4 - 🔂 Repeticiones: 12
+        <span class="emoji-video" onclick="mostrarVideo('vid1', event)">🎥</span>
+        <div id="vid1" class="video">
+          <video width="300" controls>
+            <source src="videos/sentadillas.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
-      <div id="video1" class="video">
-        <video width="300" controls>
-          <source src="videos/sentadillas.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
-      </div>
-    </div>
-    <div id="dia1" class="ejercicios">
+
       <div class="ejercicio">
-        <span>Sentadilla Hack </span>
-        <span>4x12</span>
-        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+        <strong>🏋️ Sentadilla Hack</strong><br>
+        🔁 Series: 4 - 🔂 Repeticiones: 12
+        <span class="emoji-video" onclick="mostrarVideo('vid2', event)">🎥</span>
+        <div id="vid2" class="video">
+          <video width="300" controls>
+            <source src="videos/sentadillas.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
-      <div id="video1" class="video">
-        <video width="300" controls>
-          <source src="videos/sentadillas.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
-      </div>
-    </div>
-    <div id="dia1" class="ejercicios">
+      
       <div class="ejercicio">
-        <span>Sentadilla Sumo </span>
-        <span>4x12</span>
-        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+        <strong>🏋️ Sentadilla Sumo</strong><br>
+        🔁 Series: 4 - 🔂 Repeticiones: 12
+        <span class="emoji-video" onclick="mostrarVideo('vid1', event)">🎥</span>
+        <div id="vid1" class="video">
+          <video width="300" controls>
+            <source src="videos/sentadillas.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
-      <div id="video1" class="video">
-        <video width="300" controls>
-          <source src="videos/sentadillas.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
-      </div>
-    </div>
-    <div id="dia1" class="ejercicios">
       <div class="ejercicio">
-        <span>Maquina de abduccion </span>
-        <span>4x12</span>
-        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+        <strong>🏋️ Maquina de abducción</strong><br>
+        🔁 Series: 4 - 🔂 Repeticiones: 12
+        <span class="emoji-video" onclick="mostrarVideo('vid3', event)">🎥</span>
+        <div id="vid3" class="video">
+          <video width="300" controls>
+            <source src="videos/sentadillas.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
-      <div id="video1" class="video">
-        <video width="300" controls>
-          <source src="videos/sentadillas.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
-      </div>
-    </div>
-    <div id="dia1" class="ejercicios">
       <div class="ejercicio">
-        <span>Sillon de cuadriceps</span>
-        <span>4x12</span>
-        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+        <strong>🏋️ Bulgaras</strong><br>
+        🔁 Series: 4 - 🔂 Repeticiones: 12
+        <span class="emoji-video" onclick="mostrarVideo('vid1', event)">🎥</span>
+        <div id="vid1" class="video">
+          <video width="300" controls>
+            <source src="videos/sentadillas.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
-      <div id="video1" class="video">
-        <video width="300" controls>
-          <source src="videos/sentadillas.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
+      <div class="ejercicio">
+        <strong>🏋️ Sillon de cuadriceps</strong><br>
+        🔁 Series: 4 - 🔂 Repeticiones: 12
+        <span class="emoji-video" onclick="mostrarVideo('vid1', event)">🎥</span>
+        <div id="vid1" class="video">
+          <video width="300" controls>
+            <source src="videos/sentadillas.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
     </div>
 
-    <div class="dia" onclick="toggleEjercicios('dia2')">
+    <div class="dia" onclick="toggleEjercicios('ejMiercoles')">
       <h3>Miércoles - Tren Superior</h3>
     </div>
-    <div id="dia2" class="ejercicios">
+    <div id="ejMiercoles" class="ejercicios">
       <div class="ejercicio">
-        <span>Press banca</span>
-        <span>series: 3x10 - peso: 40kg</span>
-        <span class="emoji-video" onclick="mostrarVideo('video2', event)">🎥✅</span>
-      </div>
-      <div id="video2" class="video">
-        <video width="300" controls>
-          <source src="videos/pressbanca.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
+        <strong>🏋️ Press banca</strong><br>
+        🔁 Series: 3 - 🔂 Repeticiones: 10 - ⚖️ Peso: 40kg
+        <span class="emoji-video" onclick="mostrarVideo('vid4', event)">🎥</span>
+        <div id="vid4" class="video">
+          <video width="300" controls>
+            <source src="videos/pressbanca.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
       </div>
     </div>
   </section>
@@ -123,13 +180,13 @@
   <script>
     function toggleEjercicios(id) {
       const seccion = document.getElementById(id);
-      seccion.style.display = seccion.style.display === 'none' ? 'block' : 'none';
+      seccion.style.display = seccion.style.display === 'block' ? 'none' : 'block';
     }
 
     function mostrarVideo(id, event) {
-      event.stopPropagation(); // para evitar que se cierren los ejercicios
+      event.stopPropagation(); // Para que no se cierre el bloque de ejercicios
       const video = document.getElementById(id);
-      video.style.display = video.style.display === 'none' ? 'block' : 'none';
+      video.style.display = video.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </body>
