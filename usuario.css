@@ -1,53 +1,88 @@
- body {
-      background-color: #121212;
-      color: white;
-      font-family: Arial, sans-serif;
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #111;
+      color: #fff;
       padding: 20px;
     }
-    h1, h2, h3 {
-      color: #ff0000;
-    }
-    .detalle {
-      color: #00aaff;
-    }
-    .cliente-info, .plan-entrenamiento, .progreso, footer {
-      margin-bottom: 30px;
-      border: 1px solid #333;
-      padding: 15px;
-      background-color: #1e1e1e;
-      border-radius: 10px;
+    h1 {
+      text-align: center;
+      color: #f00;
+      margin-bottom: 20px;
     }
     .dia {
+      background: #222;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 12px;
       cursor: pointer;
-      margin-top: 10px;
-      padding: 10px;
-      background-color: #2c2c2c;
-      border-radius: 5px;
+      transition: background 0.3s;
     }
-    .ejercicios {
+    .dia:hover {
+      background: #333;
+    }
+    .rutina {
       display: none;
       margin-top: 10px;
+      padding-left: 20px;
     }
     .ejercicio {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #2b2b2b;
+      background: #1a1a1a;
       padding: 10px;
-      margin-bottom: 5px;
-      border-radius: 5px;
+      margin-bottom: 10px;
+      border-left: 4px solid #0af;
+      border-radius: 10px;
     }
-    .video {
+    .titulo-ejercicio {
+      font-weight: bold;
+      color: #0af;
+    }
+    .info {
+      color: #ccc;
+      margin-top: 5px;
+    }
+    .video-btn {
+      background: none;
+      border: none;
+      color: #f00;
+      font-size: 20px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    .video-container {
       display: none;
-      text-align: center;
       margin-top: 10px;
     }
-    .emoji-video {
-      cursor: pointer;
-      font-size: 20px;
+    iframe {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      border-radius: 10px;
     }
-    footer {
-      text-align: center;
-      font-weight: bold;
-      color: #00aaff;
-    }
+
+    .cliente-info {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 40px;
+  color: #fff;
+  border-left: 5px solid #f00;
+}
+.cliente-info h2 {
+  margin-bottom: 15px;
+  color: #0af;
+}
+.cliente-info ul {
+  list-style: none;
+}
+.cliente-info li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.cliente-info strong {
+  color: #f00;
+}
